@@ -2,9 +2,6 @@
 ## Ordinary Characters. Extraordinary Shifts.
 ### Rules v5.0 — Shift Playtest
 
-> **Playtest status:** This version is a fresh mechanical redesign. Its core turn and pacing
-> have been tested through automated matches, but its individual Characters and starter decks
-> still need human table testing. Expect card numbers to change.
 
 ## The Big Idea
 
@@ -545,48 +542,3 @@ The first player uses only an Everyday Move on the first turn of the game.
 
 ---
 
-# Designer Appendix
-
-## What v5 Intentionally Removed
-
-- The Shifter–Stray–NPC class triangle
-- Mechanical rarity and Premium limits
-- Hidden Minivan Characters
-- Coin-flip Dodge
-- Reactive attack cancellation
-- Automatic comeback draws after Knockouts
-- Knockout-token removal
-- Deck-out sudden death
-- The old point-budget chassis system
-
-These systems can be reconsidered later, but none is required for the central game to work.
-
-## Current Playtest Targets
-
-- Average game length: approximately **9–11 rounds**
-- Opening-player win rate: close to **50%**
-- Shift Moves: special but frequent, roughly **2–4 per player per game**
-- Few or no games decided by an empty deck
-- Rotation should be valuable without being automatic
-
-## Questions for Human Playtests
-
-After each game, ask:
-
-1. Did you ever have to think about taking an Action versus using a Shift Move?
-2. Did every Character get a memorable moment?
-3. Was moving Characters through the Minivan fun or repetitive?
-4. Did you understand why each move was ready or spent?
-5. Did any Moment feel useless or unavoidable?
-6. Did the game end before it felt repetitive?
-7. Would you immediately play again with different Characters?
-
-## Early Balance Warnings
-
-- The Cannon's 3-damage Everyday Move may be too efficient.
-- Encore is intentionally powerful and should remain limited to one copy.
-- Forced switching from Detour may be frustrating if it repeatedly denies a planned Shift.
-- Healing should extend a fight without creating an endless loop.
-- The starter decks need real-player testing before being labeled balanced.
-
-Change one number at a time, record the result, and favor clearer cards over clever exceptions.
