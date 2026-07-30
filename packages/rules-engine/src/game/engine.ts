@@ -312,7 +312,6 @@ function legalMoment(s: GameState, me: PlayerState, opp: PlayerState, card: Supp
     case S_CARPOOL: return me.minivan.length < s.cfg.deck.minivanMax && me.hand.some(isChar);
     case S_DETOUR: return !!opp.active && opp.minivan.length > 0;
     case S_ENCORE: return !!me.active;
-    case S_GROUP: return me.deck.some(isChar);
     default: return true;
   }
 }
@@ -394,15 +393,21 @@ function playMoment(s: GameState, me: PlayerState, opp: PlayerState, card: Suppo
         emit(s, { t: "ready", player: me.id, uid: me.active.uid });
       }
       break;
-    case S_GROUP:
-      queuePending(s, {
-        kind: "target",
-        player: me.id,
-        effectId: T_GROUP_CHARACTER,
-        options: me.deck.filter(isChar).map((c) => c.uid),
-        optional: false,
-      });
+    case S_GROUP: {
+      const options = me.deck.filter(isChar).map((c) => c.uid);
+      if (options.length) {
+        queuePending(s, {
+          kind: "target",
+          player: me.id,
+          effectId: T_GROUP_CHARACTER,
+          options,
+          optional: false,
+        });
+      } else {
+        rng.shuffle(me.deck);
+      }
       break;
+    }
     case S_BACKSEAT:
       s.flags.backseatSwitch = true;
       break;

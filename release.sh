@@ -126,5 +126,5 @@ git push origin "$TAG"
 
 echo
 echo "✅ Released ${TAG}."
-echo "   Watch the build:  https://github.com/EpicureofCrayons/minivanaganstcg/actions"
+echo "   Watch the build:  https://github.com/EpicureofCrayons/Minivanigans/actions"
 echo "   When it's green, review the DRAFT release and publish it."

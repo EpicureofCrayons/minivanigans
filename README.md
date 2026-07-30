@@ -29,7 +29,7 @@ them.
 ## Start playing
 
 Download the newest build from
-[GitHub Releases](https://github.com/EpicureofCrayons/minivanaganstcg/releases).
+[GitHub Releases](https://github.com/EpicureofCrayons/Minivanigans/releases).
 Installers are produced for macOS, Windows, and Linux.
 
 The current game rules are in

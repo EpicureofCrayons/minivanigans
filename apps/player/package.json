@@ -4,10 +4,14 @@
   "version": "0.1.4",
   "type": "module",
   "scripts": {
+    "predev": "npm run build -w @minivanigans/rules-engine",
     "dev": "vite",
+    "prebuild": "npm run build -w @minivanigans/rules-engine",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "pretypecheck": "npm run build -w @minivanigans/rules-engine",
     "typecheck": "tsc --noEmit",
+    "pretauri": "npm run build -w @minivanigans/rules-engine",
     "tauri": "tauri"
   },
   "dependencies": {

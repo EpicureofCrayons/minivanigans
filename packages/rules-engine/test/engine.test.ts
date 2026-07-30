@@ -239,6 +239,24 @@ describe("Moments", () => {
     expect(healed.players.p0.minivan[0]!.hp).toBe(3);
   });
 
+  it("Group Chat can still be played when no Character remains in the deck", () => {
+    const groupChat = moment("group-chat");
+    const deckMoment = moment("snack-break");
+    const s = state({
+      flags: beforeAction(),
+      players: {
+        p0: player("p0", { hand: [groupChat], deck: [deckMoment] }),
+        p1: player("p1"),
+      },
+    });
+
+    expect(legalActions(s)).toContainEqual({ type: "playSupport", uid: groupChat.uid });
+    const played = applyAction(s, { type: "playSupport", uid: groupChat.uid });
+    expect(played.players.p0.hand).toHaveLength(0);
+    expect(played.players.p0.discard).toContainEqual(groupChat);
+    expect(played.pending).toBeNull();
+  });
+
   it("Detour is decided by the opponent", () => {
     const detour = moment("detour");
     const reserve = ch("anchor");
