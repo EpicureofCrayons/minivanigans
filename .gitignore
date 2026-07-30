@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+*.xcf
+# Tauri build output (Phase 2+)
+apps/*/src-tauri/target/
+
+# Personal/local coding-assistant settings
+.claude/
+
+# Local git credential store (created per-repo by credential.helper)
+.gh-credentials
+
+# Personal push helper (machine/account-specific, keep local)
+publish-to-github.sh

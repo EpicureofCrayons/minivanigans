@@ -1,0 +1,15 @@
+{
+  "name": "minivanigans",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Minivanigans! — make-your-own card game, rules engine, and desktop apps",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}

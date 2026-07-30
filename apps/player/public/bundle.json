@@ -1,0 +1,404 @@
+{
+  "format": "day-shifters-bundle",
+  "bundleVersion": 4,
+  "config": {
+    "version": 4,
+    "deck": {
+      "size": {
+        "min": 18,
+        "max": 18
+      },
+      "character": {
+        "min": 12,
+        "max": 12
+      },
+      "support": {
+        "min": 6,
+        "max": 6
+      },
+      "maxCopiesByName": 3,
+      "maxPremiumPlus": 2,
+      "minivanMax": 3,
+      "startingHand": 5,
+      "secondPlayerBonusCards": 1,
+      "handLimit": 7,
+      "mulliganMax": 2
+    },
+    "rules": {
+      "winKnockouts": 3,
+      "koComebackDraw": 1,
+      "suddenDeath": true,
+      "suddenDeathBasis": "scored",
+      "powerUpBonus": 20
+    },
+    "budgets": {
+      "Common": 12,
+      "PremiumPlus": 15
+    },
+    "hp": {
+      "min": 30,
+      "max": 80,
+      "pointsPer": 10
+    },
+    "damage": {
+      "min": 10,
+      "max": 30,
+      "pointsPer": 10,
+      "pointsFactor": 2
+    },
+    "lanyard": {
+      "widthIn": 4,
+      "heightIn": 6
+    },
+    "classAdvantageBonus": 10,
+    "classBeats": {
+      "Shifter": "Stray",
+      "Stray": "NPC",
+      "NPC": "Shifter"
+    },
+    "abilities": [
+      {
+        "id": "none",
+        "displayName": "None",
+        "description": "No ability.",
+        "cost": 0
+      },
+      {
+        "id": "dodge",
+        "displayName": "Dodge",
+        "description": "When attacked on the opponent's turn, flip a coin (heads: take 0 damage; tails: take full damage). Usable once per opponent turn.",
+        "cost": 3
+      },
+      {
+        "id": "matchup-master",
+        "displayName": "Matchup Master",
+        "description": "When this fighter attacks with class advantage, add +10 more damage (total +20 with the class bonus).",
+        "cost": 2
+      },
+      {
+        "id": "regain-health",
+        "displayName": "Regain Health",
+        "description": "Once per turn, before you attack, you may heal 10 HP — if you do, this fighter can't attack this turn.",
+        "cost": 2
+      },
+      {
+        "id": "run-away",
+        "displayName": "Run Away",
+        "description": "Once per turn, before you attack, switch this fighter with one from your Minivan without using your Action. No effect if your Minivan is empty.",
+        "cost": 1
+      }
+    ],
+    "supportEffects": [
+      {
+        "id": "pep-talk",
+        "displayName": "Pep Talk",
+        "description": "Restore 50% of your Active Character's max HP (rounded down).",
+        "maxPerDeck": 2
+      },
+      {
+        "id": "find-a-friend",
+        "displayName": "Find a Friend",
+        "description": "Search your deck for any 1 Character, add it to your hand, then shuffle.",
+        "maxPerDeck": 2
+      },
+      {
+        "id": "power-up",
+        "displayName": "Power Up",
+        "description": "Your Active Character's next attack deals +20 damage. Spent when the attack is declared, even if it's cancelled or dodged.",
+        "maxPerDeck": 1
+      },
+      {
+        "id": "tag-out",
+        "displayName": "Tag Out",
+        "description": "Switch your Active with a Minivan Character. Does not count as your Action — you may still take another Action this turn.",
+        "maxPerDeck": 2
+      },
+      {
+        "id": "sneak-peek",
+        "displayName": "Sneak Peek",
+        "description": "Look at all face-down Characters in your opponent's Minivan.",
+        "maxPerDeck": 2
+      },
+      {
+        "id": "second-wind",
+        "displayName": "Second Wind",
+        "description": "Remove 1 knockout from your opponent's tally, and return one of your knocked-out Characters from the discard pile to your hand.",
+        "maxPerDeck": 1
+      },
+      {
+        "id": "not-so-fast",
+        "displayName": "Not So Fast",
+        "description": "Cancel the opponent's next attack (it deals 0 damage).",
+        "maxPerDeck": 1
+      },
+      {
+        "id": "quick-draw",
+        "displayName": "Quick Draw",
+        "description": "Draw 2 cards.",
+        "maxPerDeck": 2
+      }
+    ],
+    "presets": [
+      {
+        "id": "tank",
+        "displayName": "The Tank",
+        "rarity": "Common",
+        "hp": 80,
+        "damage": 20,
+        "abilityId": "none",
+        "identity": "Takes 4 hits to drop. Walls out glass cannons."
+      },
+      {
+        "id": "cannon",
+        "displayName": "The Cannon",
+        "rarity": "Common",
+        "hp": 60,
+        "damage": 30,
+        "abilityId": "none",
+        "identity": "Hardest-hitting Common. Falls in 2–3 hits."
+      },
+      {
+        "id": "pivot",
+        "displayName": "The Pivot",
+        "rarity": "Common",
+        "hp": 70,
+        "damage": 20,
+        "abilityId": "run-away",
+        "identity": "Ducks out of bad matchups without using your Action."
+      },
+      {
+        "id": "puncher",
+        "displayName": "The Puncher",
+        "rarity": "Common",
+        "hp": 60,
+        "damage": 20,
+        "abilityId": "matchup-master",
+        "identity": "Hits for 40 with class advantage — rewards good switching."
+      },
+      {
+        "id": "sustainer",
+        "displayName": "The Sustainer",
+        "rarity": "Common",
+        "hp": 60,
+        "damage": 20,
+        "abilityId": "regain-health",
+        "identity": "Outlasts opponents; heals instead of attacking."
+      },
+      {
+        "id": "gambler",
+        "displayName": "The Gambler",
+        "rarity": "Common",
+        "hp": 50,
+        "damage": 20,
+        "abilityId": "dodge",
+        "identity": "Coin-flips incoming attacks. Feast or famine."
+      },
+      {
+        "id": "hit-and-run",
+        "displayName": "The Hit-and-Run",
+        "rarity": "Common",
+        "hp": 50,
+        "damage": 30,
+        "abilityId": "run-away",
+        "identity": "Slips out of danger, then hits like a truck."
+      },
+      {
+        "id": "all-in",
+        "displayName": "The All-In",
+        "rarity": "Common",
+        "hp": 40,
+        "damage": 30,
+        "abilityId": "matchup-master",
+        "identity": "50 damage with advantage; folds to a stiff breeze."
+      },
+      {
+        "id": "captain",
+        "displayName": "The Captain",
+        "rarity": "PremiumPlus",
+        "hp": 80,
+        "damage": 30,
+        "abilityId": "run-away",
+        "identity": "The complete package: tanky, hard-hitting, slippery."
+      },
+      {
+        "id": "ace",
+        "displayName": "The Ace",
+        "rarity": "PremiumPlus",
+        "hp": 70,
+        "damage": 30,
+        "abilityId": "matchup-master",
+        "identity": "50 damage with advantage — a 2-hit KO on most fighters."
+      },
+      {
+        "id": "fortress",
+        "displayName": "The Fortress",
+        "rarity": "PremiumPlus",
+        "hp": 80,
+        "damage": 20,
+        "abilityId": "dodge",
+        "identity": "The hardest thing in the game to remove."
+      },
+      {
+        "id": "wildcard",
+        "displayName": "The Wildcard",
+        "rarity": "PremiumPlus",
+        "hp": 60,
+        "damage": 30,
+        "abilityId": "dodge",
+        "identity": "High risk, high reward, maximum drama."
+      }
+    ],
+    "conduct": {
+      "bannedWords": []
+    }
+  },
+  "templates": {
+    "version": 2,
+    "templates": {
+      "Character/Common": {
+        "frame": "ribbon",
+        "accent": "class",
+        "accentColor": "#0f766e",
+        "cornerRadius": 22,
+        "slots": {
+          "name": {
+            "x": 4,
+            "y": 3,
+            "w": 62,
+            "h": 9
+          },
+          "hp": {
+            "x": 68,
+            "y": 3,
+            "w": 28,
+            "h": 8
+          },
+          "art": {
+            "x": 4,
+            "y": 14,
+            "w": 92,
+            "h": 40
+          },
+          "attackName": {
+            "x": 4,
+            "y": 56,
+            "w": 70,
+            "h": 6
+          },
+          "attackDamage": {
+            "x": 80,
+            "y": 55,
+            "w": 16,
+            "h": 8
+          },
+          "ability": {
+            "x": 4,
+            "y": 64,
+            "w": 92,
+            "h": 22
+          },
+          "classMarker": {
+            "x": 4,
+            "y": 89,
+            "w": 32,
+            "h": 7
+          },
+          "rarityMarker": {
+            "x": 68,
+            "y": 89,
+            "w": 28,
+            "h": 7
+          }
+        }
+      },
+      "Character/PremiumPlus": {
+        "frame": "borderless",
+        "accent": "class",
+        "accentColor": "#0f766e",
+        "cornerRadius": 22,
+        "slots": {
+          "name": {
+            "x": 4,
+            "y": 3,
+            "w": 62,
+            "h": 9
+          },
+          "hp": {
+            "x": 68,
+            "y": 3,
+            "w": 28,
+            "h": 8
+          },
+          "art": {
+            "x": 4,
+            "y": 14,
+            "w": 92,
+            "h": 40
+          },
+          "attackName": {
+            "x": 4,
+            "y": 56,
+            "w": 70,
+            "h": 6
+          },
+          "attackDamage": {
+            "x": 80,
+            "y": 55,
+            "w": 16,
+            "h": 8
+          },
+          "ability": {
+            "x": 4,
+            "y": 64,
+            "w": 92,
+            "h": 22
+          },
+          "classMarker": {
+            "x": 4,
+            "y": 89,
+            "w": 32,
+            "h": 7
+          },
+          "rarityMarker": {
+            "x": 68,
+            "y": 89,
+            "w": 28,
+            "h": 7
+          }
+        }
+      },
+      "Support": {
+        "frame": "ribbon",
+        "accent": "fixed",
+        "accentColor": "#0f766e",
+        "cornerRadius": 22,
+        "slots": {
+          "name": {
+            "x": 4,
+            "y": 3,
+            "w": 92,
+            "h": 9
+          },
+          "art": {
+            "x": 4,
+            "y": 14,
+            "w": 92,
+            "h": 34
+          },
+          "effect": {
+            "x": 4,
+            "y": 50,
+            "w": 92,
+            "h": 36
+          },
+          "typeLabel": {
+            "x": 4,
+            "y": 90,
+            "w": 92,
+            "h": 7
+          }
+        }
+      }
+    }
+  }
+}
