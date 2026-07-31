@@ -241,6 +241,30 @@ h3 {
     position: static !important;
     inset: auto !important;
   }
+  .rules-sheet {
+    /*
+      Printing must not inherit the active screen theme. In dark mode that left
+      surface callouts dark while the old blanket text override made their copy
+      nearly black. Give the entire rules document a light, print-safe palette
+      and let its normal text/background utilities keep their intended contrast.
+    */
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #eef5fb;
+    --border: #b8c9d9;
+    --fg: #111827;
+    --fg-muted: #475569;
+    --brand: #0879c9;
+    --brand-fg: #ffffff;
+    --accent: #5f8500;
+    --accent-fg: #172300;
+    --danger: #b91c1c;
+    --success: #3f7300;
+    --warning: #a84b00;
+    background: var(--surface) !important;
+    color: var(--fg) !important;
+    color-scheme: light;
+  }
   /* Keep a titled block from being split across a page break. */
   .avoid-break {
     break-inside: avoid;

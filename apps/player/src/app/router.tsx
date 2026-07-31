@@ -6,6 +6,7 @@ import { CardBuilder } from "../screens/CardBuilder";
 import { DeckBuilder } from "../screens/DeckBuilder";
 import { PrintExport } from "../screens/PrintExport";
 import { CardBacks } from "../screens/CardBacks";
+import { TokenPrint } from "../screens/TokenPrint";
 import { PrinterCalibration } from "../screens/PrinterCalibration";
 import { PlaySetup } from "../screens/PlaySetup";
 import { PlayMatch } from "../screens/PlayMatch";
@@ -33,6 +34,7 @@ export const router = createHashRouter([
       { path: "play/match", element: <PlayMatch /> },
       { path: "print", element: <PrintExport /> },
       { path: "card-backs", element: <CardBacks /> },
+      { path: "tokens", element: <TokenPrint /> },
       { path: "calibrate", element: <PrinterCalibration /> },
       { path: "rules", element: <RulesPrint /> },
       { path: "playmat", element: <Playmat /> },

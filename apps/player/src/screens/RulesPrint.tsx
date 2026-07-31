@@ -14,7 +14,8 @@ export function RulesPrint() {
         actions={<Button variant="primary" onClick={() => void openPrintDialog()}><Printer size={16} /> Print rules</Button>}
       />
 
-      <article className="rules-sheet mx-auto max-w-4xl space-y-7 rounded-card border border-line bg-surface p-8 print:max-w-none print:border-0 print:p-0">
+      <article className="rules-sheet print-area flow mx-auto max-w-4xl space-y-7 rounded-card border border-line bg-surface p-8 print:max-w-none print:border-0 print:p-0">
+        <style>{"@page { size: auto; margin: 0.55in; }"}</style>
         <header className="border-b border-line pb-5 text-center">
           <h1 className="font-display text-4xl font-bold text-brand">MINIVANIGANS!</h1>
           <p className="mt-1 font-semibold">Ordinary Characters. Extraordinary Shifts.</p>

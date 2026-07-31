@@ -20,7 +20,8 @@ and print everything you need for a game at home.
 - Build an 18-card deck with live legality checks.
 - Test a deck against the computer.
 - Create a profile, avatar, and custom ride.
-- Print or export cards, themed card backs, rules, and a personal play mat.
+- Print or export cards, themed card backs, game tokens, rules, and a personal
+  play mat.
 - Back up or share your creations.
 
 Your cards and profile stay on your device unless you choose to export or share
@@ -36,6 +37,8 @@ The current game rules are in
 [Minivanigans_Rules_v5.md](Minivanigans_Rules_v5.md). Version 5 is still being
 playtested, so individual card numbers may change as real games reveal what is
 fun and what needs tuning.
+
+See [CHANGELOG.md](CHANGELOG.md) for the changes included in each app version.
 
 ## Work on the app
 

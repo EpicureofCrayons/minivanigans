@@ -189,11 +189,14 @@ export function Profile() {
                 onChange={(e) => patch({ favoriteCardId: e.target.value || undefined })}
               >
                 <option value="">None</option>
-                {characters.map((c) => (
-                  <option key={c.id} value={c.id}>
-                    {c.name || "Untitled"} — {c.type === "Character" ? c.cardClass : ""}
-                  </option>
-                ))}
+                {characters.map((c) => {
+                  const chassis = cfg.presets.find((preset) => preset.id === c.chassisId);
+                  return (
+                    <option key={c.id} value={c.id}>
+                      {c.name || "Untitled"} — {chassis?.displayName ?? "Character"}
+                    </option>
+                  );
+                })}
               </select>
             )}
           </Field>
